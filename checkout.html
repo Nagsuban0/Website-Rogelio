@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">Food Delivery</div>
+    <nav>
+        <ul>
+            <li><a href="website.html">Home</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="checkout-container">
+    <h1>Checkout</h1>
+    <form id="checkout-form">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" required>
+
+        <label for="address">Delivery Address:</label>
+        <textarea id="address" required></textarea>
+
+        <label for="payment-method">Payment Method:</label>
+        <select id="payment-method" required>
+            <option value="cash">Cash on Delivery</option>
+            <option value="card">Credit/Debit Card</option>
+        </select>
+
+        <h2>Your Order</h2>
+        <ul id="order-summary"></ul>
+
+        <h3 id="total-price">Total: ₱0</h3>
+
+        <button type="submit" class="checkout-btn">Confirm Order</button>
+    </form>
+</section>
+
+<button type="submit" class="checkout-btn">Confirm Order</button>
+
+
+<script src="checkout.js"></script>
+</body>
+</html>

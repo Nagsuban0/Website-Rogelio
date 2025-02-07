@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">Food Delivery</div>
+    <nav>
+        <ul>
+            <li><a href="website.html">Home</a></li>
+            <!-- Change href to link directly to the categories section -->
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="search">
+    <input type="text" id="search-input" placeholder="Search for food...">
+    <button id="search-btn">Search</button>
+</section>
+
+<section class="food-menu">
+    <h2>Explore Foods</h2>
+    <div class="food-items">
+        <div class="food-card">
+            <img src="image/pizza.jfif" alt="Pizza">
+            <h3>Pizza</h3>
+            <p>₱150</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="food-card">
+            <img src="image/sandwich.jfif" alt="Sandwich">
+            <h3>Sandwich</h3>
+            <p>₱80</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="food-card">
+            <img src="image/burger.jfif" alt="Burger">
+            <h3>Burger</h3>
+            <p>₱59</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <section class="categories" id="categories"> <!-- Add an ID for smooth scrolling -->
+        <h2>Food Categories</h2>
+        <div class="category-list">
+            <div class="category-card" onclick="filterItems('pizzas')">
+                <h3>Pizzas</h3>
+                <button>See Pizzas</button>
+            </div>
+            <div class="category-card" onclick="filterItems('burgers')">
+                <h3>Burgers</h3>
+                <button>See Burgers</button>
+            </div>
+            <div class="category-card" onclick="filterItems('sandwiches')">
+                <h3>Sandwiches</h3>
+                <button>See Sandwiches</button>
+            </div>
+        </div>
+    
+        <div id="food-items-container"></div>
+    </section>
+
+</section>
+
+<section class="cart">
+    <h2>Your Cart</h2>
+    <ul class="cart-list"></ul>
+    <h3 class="cart-total">Total: ₱0</h3>
+    <button class="checkout-btn">Checkout</button>
+    <button class="clear-cart-btn">Clear Cart</button> <!-- Add this button -->
+</section>
+
+<p id="cart-message" style="display: none; color: green; font-weight: bold;"></p>
+
+<script src="script.js"></script>
+</body>
+</html>
